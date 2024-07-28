@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform , View ,Text,TextInput} from 'react-native';
+import { Image, StyleSheet, Platform , View ,Text,TextInput,FlatList} from 'react-native';
 import React ,{useState} from 'react';
 
 import { HelloWave } from '@/components/HelloWave';
@@ -24,13 +24,27 @@ export default function HomeScreen() {
   ])
   return (
     <View style={styles.background} >
-      {people.map((item)=>(
+      <FlatList
+      keyExtractor={(item)=>item.age}
+      data={people}
+      renderItem={({item})=>(
+        <Text style={styles.item}>{item.name}</Text>
+      )}
+      
+      
+      
+      />
+
+
+
+
+      {/* {people.map((item)=>(
         <View>
           <Text>
             {item.name}
           </Text>
         </View>
-      ))}
+      ))} */}
 
 
 
@@ -72,5 +86,8 @@ const styles = StyleSheet.create({
     padding:8,
     margin:20,
     width:200
+  },
+  item:{
+    marginTop:24,
   }
 });
