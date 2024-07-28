@@ -16,10 +16,11 @@ export default function HomeScreen() {
       <Text>Enter Name:</Text>
       <TextInput style={styles.input} 
       placeholder='e.g ojieh david chukwuyenum'
+
       onChangeText={(val)=>setName(val)}
       
       />
-      <Text>Enter Name:</Text>
+      <Text>Enter age:</Text>
       <TextInput style={styles.input} 
       placeholder='e.g 20'
       onChangeText={(val)=>setAge(val)}
