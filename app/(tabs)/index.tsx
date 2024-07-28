@@ -8,26 +8,50 @@ import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
 
-  const [name,setName]=useState('chuks');
-  const [age,setAge]=useState(40);
+  // const [name,setName]=useState('chuks');
+  // const [age,setAge]=useState(40);
 
+  const [people,setPeople]=useState([
+    {name:"chuks",age:10},
+    {name:"emma",age:10},
+    {name:"sam",age:10},
+    {name:"tobi",age:10},
+    {name:"divine",age:10},
+    {name:"kelvin",age:124},
+    {name:"gideon",age:10},
+    {name:"favour",age:11},
+    {name:"edet",age:10},
+  ])
   return (
     <View style={styles.background} >
-      <Text>Enter Name:</Text>
+      {people.map((item)=>(
+        <View>
+          <Text>
+            {item.name}
+          </Text>
+        </View>
+      ))}
+
+
+
+
+
+
+      {/* <Text>Enter Name:</Text>
       <TextInput style={styles.input} 
       placeholder='e.g ojieh david chukwuyenum'
 
       onChangeText={(val)=>setName(val)}
       
       />
-      <Text>Enter age:</Text>
+      <Text>Enter :</Text>
       <TextInput style={styles.input} 
       placeholder='e.g 20'
       onChangeText={(val)=>setAge(val)}
       
       />
 
-     <Text> name:{name},age:{age}</Text>
+     <Text> name:{name},age:{age}</Text> */}
      
     </View>
   )
