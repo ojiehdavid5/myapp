@@ -76,8 +76,11 @@ const styles = StyleSheet.create({
   background: {
     backgroundColor:"white",
     flex:1,
-    justifyContent:'center',
-    alignItems:'center'
+
+
+    paddingTop:40,
+    paddingHorizontal:20,
+
 
   },
   input:{
@@ -89,5 +92,8 @@ const styles = StyleSheet.create({
   },
   item:{
     marginTop:24,
+    padding:30,
+    backgroundColor:'pink',
+    fontSize:24,
   }
 });
