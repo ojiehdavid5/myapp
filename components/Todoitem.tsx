@@ -11,6 +11,9 @@ export default function Todoitem({item,pressHandler })  {
            </Text>
  
         </TouchableOpacity>
+
+
+       
     )
   }
 }
